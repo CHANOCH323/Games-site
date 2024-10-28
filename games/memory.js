@@ -5,7 +5,6 @@ const wordList = document.querySelector('.word-list');
 let wordsGrid = []
 let savedTables = JSON.parse(localStorage.getItem('savedTables'))||{};
 
-
 function goHome() {
     window.location.href = '/index/index.html';
 }
