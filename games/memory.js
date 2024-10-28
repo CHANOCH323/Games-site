@@ -6,7 +6,7 @@ let wordsGrid = []
 let savedTables = JSON.parse(localStorage.getItem('savedTables')) || {};
 
 function goHome() {
-    window.location.href = '/index/index.html';
+    window.location.href = '/home/home.html';
 }
 
 function getRandomLetter() {

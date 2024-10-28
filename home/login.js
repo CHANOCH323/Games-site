@@ -26,8 +26,7 @@ function signup() {
         document.getElementById('signupError').textContent = 'Please fill a valid password'
     } else {
         localStorage.setItem('user', JSON.stringify({ fullName, idNumber, email, password }));
-        window.location.href = 'index.html';
-        console.log(localStorage.getItem('user'));
+        window.location.href = 'home.html';
 
     }
 }
@@ -44,6 +43,6 @@ function login() {
     }else if(user.password !== password) {
         document.getElementById('loginError').textContent = 'The code is incorrect please try agin'
     }else{
-        window.location.href = 'index.html'
+        window.location.href = 'home.html'
     }
 }
