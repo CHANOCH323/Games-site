@@ -3,7 +3,7 @@ const wordGrid = document.querySelector('.game-board');
 let selectedCells = [];
 const wordList = document.querySelector('.word-list');
 let wordsGrid = []
-let savedTables = JSON.parse(localStorage.getItem('savedTables'))||{};
+let savedTables = JSON.parse(localStorage.getItem('savedTables')) || {};
 
 function goHome() {
     window.location.href = '/index/index.html';
@@ -49,17 +49,19 @@ function appendStrCol(str, reverse = false) {
     const row = getRandomNumber(gridSize);
     let col = getRandomNumber(gridSize - str.length);
     const strArr = reverse ? str.split('').reverse() : str.split('');
-
+    let strGrid = ''
     for (let i = 0; i < strArr.length; col++, i++) {
         const cell = getLetter(row, col);
+        strGrid += cell.textContent
         if (cell.textContent && cell.textContent !== strArr[i]) {
             return false;
         }
     }
+    if (strGrid === str) {
+        return false
+    }
 
-    col -= strArr.
-
-        length;
+    col -= strArr.length;
     for (let i = 0; i < strArr.length; col++, i++) {
         getLetter(row, col).textContent = strArr[i];
     }
@@ -103,7 +105,9 @@ function appendWords(words) {
 
 function createNewTable() {
     const tableTitle = document.getElementById('table-title').value;
-    const wordsInput = document.getElementById('words-input').value.split(',').map(word => word.trim());
+    let wordsInput = document.getElementById('words-input').value.split(',').map(word => word.trim());
+    wordsInput = new Set(wordsInput)
+    wordsInput = Array.from(wordsInput)
     if (!tableTitle || !wordsInput) {
         document.getElementById('gridError').textContent = 'Please fill in all fields';
         return
@@ -174,7 +178,7 @@ function winner(select, words) {
             wordElement.classList.add('found');
             wordsFound++;
             document.getElementById('words-found').textContent = wordsFound;
-            if(wordsFound >= wordsGrid.length){
+            if (wordsFound >= wordsGrid.length) {
                 endGame()
             }
             return true;
@@ -288,11 +292,20 @@ function stopGame() {
     }
 }
 function endGame() {
+    clearInterval(timerInterval);
     elapsedTime = Math.floor((Date.now() - startTime) / 1000);
     title = document.getElementById('titleHeader').textContent
     savedTables[title].games.push({ elapsedTime, wordsFound, failedAttempts, stopAttempts })
     localStorage.setItem('savedTables', JSON.stringify(savedTables));
-    document.getElementById('messagesToUser').textContent = "Congratulations, You Won!";
+    // document.getElementById('messagesToUser').textContent = "Congratulations, You Won!";
+    const overlay = document.getElementById('overlay');
+    const message = document.getElementById('game-over-message');
+    
+    overlay.style.display = 'block';  // מציג את שכבת הכיסוי
+    message.style.display = 'block'; 
+}
+function restartGame(){
+    window.location.href = './memory.html';
 }
 
 
