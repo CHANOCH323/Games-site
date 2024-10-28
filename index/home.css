@@ -1,0 +1,33 @@
+.games-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+.game {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    margin: 10px;
+}
+
+.game h2 {
+    color: #4CAF50;
+}
+
+.game button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.game button:hover {
+    background-color: #45a049;
+}
+

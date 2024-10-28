@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="idNumberLogin" placeholder="Enter ID number">
+            <input type="password" id="passwordLogin" placeholder="Enter password">
+            <button onclick="login()">Login</button>
+            <p class="error" id="loginError"></p>
+        </div>
+
+        <div id="signupForm">
+            <h2>Sign Up</h2>
+            <input type="text" id="fullName" placeholder="Enter full name">
+            <input type="text" id="idNumberSignup" placeholder="Enter ID number">
+            <input type="email" id="email" placeholder="Enter email">
+            <input type="password" id="passwordSignup" placeholder="Enter password">
+            <button onclick="signup()">Sign Up</button>
+            <p class="error" id="signupError"></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

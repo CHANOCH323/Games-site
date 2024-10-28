@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.header button {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+}
+
+.header button:hover {
+    background-color: #acdfaf;
+}
+
+
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}

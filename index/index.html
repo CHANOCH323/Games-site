@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="stily.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the Game Hub</h1>
+        <button onclick="personalPage()" >Go to Personal Page</button>
+    </div>
+
+    <div class="games-container">
+        <div class="game" id="wordSearchGame">
+            <h2>Word Search</h2>
+            <p>Find hidden words in the grid!</p>
+            <button onclick="startWordSearch()">Play Now</button>
+        </div>
+
+        <div class="game" id="quizGame">
+            <h2>Quiz Game</h2>
+            <p>Test your knowledge with custom questions!</p>
+            <button onclick="startQuizGame()">Play Now</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Enjoy your games and track your progress in your personal page!</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game</title>
+    <link rel="stylesheet" href="memory.css">
+</head>
+<body>
+    <header>
+        <h1 id="titleHeader"></h1>
+        <button onclick="goHome()">Home</button>
+    </header>
+<div id="newTable">
+    <section class="instructions">
+        <h2>How to Create a Table</h2>
+        <p>Enter the title of the table, words (separated by commas), and the grid size.</p>
+    </section>
+
+    <div class="form-container">
+        <label for="table-title">Table Title:</label>
+        <input type="text" id="table-title" placeholder="Enter table title">
+
+        <label for="grid-size">Grid Size:</label>
+        <input type="number" id="grid-size" placeholder="Enter grid size" value="15" min="5" max="20">
+
+        <label for="words-input">Words (separated by commas):</label>
+        <input type="text" id="words-input" placeholder="Enter words">
+
+        <button onclick="createNewTable()">Create Table</button>
+        <p id="gridError"></p>
+    </div>
+</div>
+<div id="gameTable">
+    <div class="game-board"></div>
+    <div id="game-info">
+        <h3>Game Info</h3>
+        <p>Timer: <span id="timer">0:00</span></p>
+        <p>Words Found: <span id="words-found">0</span></p>
+        <p>Total Words: <span id="total-words">15</span></p>
+        <p>Failed Attempts: <span id="failed-attempts">0</span></p>
+        <p>stop Attempts: <span id="stop-attempts">0</span></p>
+        <button id="stop-game" onclick="stopGame()">Stop Game</button>
+        <p id="messagesToUser"></p>
+    </div>
+    
+    <ul class="word-list"></ul>
+</div>
+
+    <section id="saved-tables-section" class="saved-tables-section">
+        <h2>Saved Tables</h2>
+        <div id="saved-tables"></div>
+    </section>
+
+    <script src="memory.js"></script>
+</body>
+</html>

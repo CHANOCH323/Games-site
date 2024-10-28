@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between
+}
+button {
+    background-color: #4CAF50; /* צבע רקע ירוק */
+    border: none; /* ביטול גבולות הכפתור */
+    color: white; /* צבע טקסט לבן */
+    padding: 15px 32px; /* ריווח פנימי */
+    text-align: center; /* יישור טקסט במרכז */
+    text-decoration: none; /* ביטול קו תחתי */
+    display: inline-block;
+    font-size: 16px; /* גודל גופן */
+    margin: 4px 2px; /* שוליים */
+    cursor: pointer; /* סמן יד בעת מעבר עכבר */
+    border-radius: 8px; /* פינות מעוגלות */
+    transition: background-color 0.3s ease; /* אפקט מעבר על צבע רקע */
+}
+
+button:hover {
+    background-color: #45a049; /* צבע רקע כהה יותר בעת ריחוף */
+}
+
+button:active {
+    background-color: #3e8e41; /* צבע רקע כהה יותר בעת לחיצה */
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%; /* רוחב מלא */
+    padding: 12px 20px;
+    margin: 8px 0; /* שוליים */
+    box-sizing: border-box; /* סידור נכון של ריווח */
+    border: 2px solid #ccc; /* גבול אפור */
+    border-radius: 4px; /* פינות מעוגלות */
+    font-size: 16px;
+}
+
+.form-container {
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-table-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.create-table-section label {
+    font-size: 1.2em;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 50%;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.instructions-section ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    margin: auto;
+    background-color: #ddd;
+    border: solid 2px black;
+    aspect-ratio: 1 / 1;
+}
+
+.game-board div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+}
+.winner{
+    background-color: #3e8e41;
+}
+#gameTable{
+    display: grid;
+    grid-template-columns: 3fr  1fr;
+    gap: 50px;
+}
+#game-info{
+    border: 1px solid #333; 
+    padding: 10px; 
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #d4d0d0;
+}
+
+.word-list {
+    text-align: center;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.word-list li {
+    display: inline-block;
+    margin: 5px 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.word-list .found {
+    text-decoration: line-through;
+    color: #e74c3c;
+}
+
+.failed-words {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.actions-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.action-btn {
+    background-color: #e67e22;
+}
+
+.action-btn:hover {
+    background-color: #d35400;
+}
+
